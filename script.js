@@ -52,7 +52,7 @@ for (let i = 0; i < team.length; i++){
     for (const key in team[i]){
         document.querySelectorAll('.name')[i].innerHTML = team[i].name;
         document.querySelectorAll('.job')[i].innerHTML = team[i].position;
-        document.querySelectorAll('.img_box')[i].innerHTML = team[i].imageProfile;
+        document.querySelectorAll('img')[i].src = 'img/' + team[i].imageProfile;
     }   
 };
 
