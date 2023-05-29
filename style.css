@@ -4,11 +4,12 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+font-family: sans-serif;
 }
 
 body{
     height: 100vh;
-    background-color: rgb(248, 241, 217);
+    background-color: #333;
     padding: 2rem;
 }
 
@@ -24,6 +25,16 @@ main{
 
 .card{
     width: calc(100% / 3 - 3rem);
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem ;
+    transition: all 0.33s ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
 }
 
 .img_box{
@@ -32,12 +43,94 @@ main{
     background-color: red;
     border-radius: 1rem;
     overflow: hidden;
+    position: relative;
+}
+
+.img_box::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 210px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: -10px 10px #333;
+}
+
+.img_box::after{
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: -10px 10px #333;
 }
 
 .personal_info{
     width: 100%;
     height: 150px;
-    background-color: blue;
-    border-radius: 1rem;
-    color: beige
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    color: #333;
+    background-color: rgb(67, 197, 248);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.job{
+    position: absolute;
+    height: 50px;
+    bottom: 100%;
+    width: 210px;
+    left: 0;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(67, 197, 248);
+    font-size: 1rem;
+    border-top: 10px solid #333;
+    border-right: 10px solid #333;
+    font-weight: 700;
+    border-top-right-radius: 25px;
+}
+
+.job::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -25px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: -10px 10px rgb(67, 197, 248);
+}
+
+.job::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: -10px -10px #333;
+}
+
+
+
+img{
+    width: 100%;
 }
