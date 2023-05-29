@@ -11,41 +11,77 @@
 // BONUS 2:
 // Organizzare i singoli membri in card/schede
 
-let team = [
+const team = [
     {
-        Name: 'Wayne Barnett',
-        Position: 'Founder & CEO',
+        name: 'Wayne Barnett',
+        position: 'Founder & CEO',
         imageProfile: 'wayne-barnett-founder-ceo.jpg'
     },
     {
-        Name: 'Angela Caroll',
-        Position: 'Chief Editor',
+        name: 'Angela Caroll',
+        position: 'Chief Editor',
         imageProfile: 'angela-caroll-chief-editor.jpg'
     },
     {
-        Name: 'Walter Gordon',
-        Position: 'Office Manager',
+        name: 'Walter Gordon',
+        position: 'Office Manager',
         imageProfile: 'walter-gordon-office-manager.jpg'
     },
     {
-        Name: 'Angela Lopez',
-        Position: 'Social Media Manager',
+        name: 'Angela Lopez',
+        position: 'Social Media Manager',
         imageProfile: 'angela-lopez-social-media-manager.jpg'
     },
     {
-        Name: 'Scott Estrada',
-        Position: 'Developer',
+        name: 'Scott Estrada',
+        position: 'Developer',
         imageProfile: 'scott-estrada-developer.jpg'
     },
     {
-        Name: 'Barbara Ramos',
-        Position: 'Graphic Designer',
+        name: 'Barbara Ramos',
+        position: 'Graphic Designer',
         imageProfile: 'barbara-ramos-graphic-designer.jpg'
     }
 ]
 
-for (let i = 0; i < team.length; i++){   
+const mainDom = document.querySelector('main');
+
+
+for (let i = 0; i < team.length; i++){  
+    mainDom.appendChild(cardGenerator());
     for (const key in team[i]){
-    console.log(key, ': ', team[i][key])
+        document.querySelectorAll('.name')[i].innerHTML = team[i].name;
+        document.querySelectorAll('.job')[i].innerHTML = team[i].position;
+        document.querySelectorAll('.img_box')[i].innerHTML = team[i].imageProfile;
     }   
+};
+
+function cardGenerator(){
+    let card = document.createElement('div');
+    card.classList.add('card');
+
+    let imageBox = document.createElement('div');
+    imageBox.classList.add('img_box');
+
+    let infoBox = document.createElement('div');
+    infoBox.classList.add('personal_info');
+
+    let nameDom = document.createElement('p');
+    nameDom.classList.add('name');
+
+    let jobDom = document.createElement('p');
+    jobDom.classList.add('job');
+
+    let imageProfile = document.createElement('img');
+    imageProfile.classList.add('image_profile');
+
+    imageBox.appendChild(imageProfile);
+
+    infoBox.appendChild(nameDom);
+    infoBox.appendChild(jobDom);
+
+    card.appendChild(imageBox);
+    card.appendChild(infoBox);
+
+    return card
 }
