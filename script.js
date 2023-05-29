@@ -10,3 +10,36 @@
 // Trasformare la stringa foto in una immagine effettiva
 // BONUS 2:
 // Organizzare i singoli membri in card/schede
+
+let team = [
+    {
+        Name: 'Wayne Barnett',
+        Position: 'Founder & CEO',
+        imageProfile: 'wayne-barnett-founder-ceo.jpg'
+    },
+    {
+        Name: 'Angela Caroll',
+        Position: 'Chief Editor',
+        imageProfile: 'angela-caroll-chief-editor.jpg'
+    },
+    {
+        Name: 'Walter Gordon',
+        Position: 'Office Manager',
+        imageProfile: 'walter-gordon-office-manager.jpg'
+    },
+    {
+        Name: 'Angela Lopez',
+        Position: 'Social Media Manager',
+        imageProfile: 'angela-lopez-social-media-manager.jpg'
+    },
+    {
+        Name: 'Scott Estrada',
+        Position: 'Developer',
+        imageProfile: 'scott-estrada-developer.jpg'
+    },
+    {
+        Name: 'Barbara Ramos',
+        Position: 'Graphic Designer',
+        imageProfile: 'barbara-ramos-graphic-designer.jpg'
+    }
+]
